@@ -1,0 +1,11 @@
+[Unit]
+Description = dhcp server for tipica
+After = network.target
+
+[Service]
+ExecStartPre = /bin/mkdir -p /var/run/tipica
+ExecStart = /usr/sbin/dnsmasq -k -7 /var/lib/tipica/dnsmasq
+StartLimitBurst = 0
+
+[Install]
+WantedBy = multi-user.target

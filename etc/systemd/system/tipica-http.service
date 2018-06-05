@@ -1,0 +1,9 @@
+[Unit]
+Description = http server for tipica
+After = network.target
+
+[Service]
+ExecStart = /usr/sbin/nginx -c /etc/tipica/nginx.conf
+
+[Install]
+WantedBy = multi-user.target

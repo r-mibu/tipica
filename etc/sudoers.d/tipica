@@ -1,0 +1,1 @@
+%tipica ALL = (root) NOPASSWD: /bin/systemctl restart tipica-dhcp
